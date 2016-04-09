@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[计轶轩的技术博客]]></title>
+  <link href="http://iamjiyixuan.github.io/atom.xml" rel="self"/>
+  <link href="http://iamjiyixuan.github.io/"/>
+  <updated>2016-04-09T18:55:59+08:00</updated>
+  <id>http://iamjiyixuan.github.io/</id>
+  <author>
+    <name><![CDATA[]]></name>
+    
+  </author>
+  <generator uri="http://www.mweb.im/">MWeb</generator>
+  
+  <entry>
+    <title type="html"><![CDATA[Swift 学习资料整理]]></title>
+    <link href="http://iamjiyixuan.github.io/14601925176550.html"/>
+    <updated>2016-04-09T17:01:57+08:00</updated>
+    <id>http://iamjiyixuan.github.io/14601925176550.html</id>
+    <content type="html"><![CDATA[
+<h2 id="toc_0">阅读</h2>
+
+<ul>
+<li><a href="https://developer.apple.com/swift/">苹果 Swift 官网</a></li>
+<li><a href="http://swiftcn.io/doc/index.html">The Swift Programming Language 中文版</a> - Apple 官方 Swift 教程中文版</li>
+<li><a href="http://swifter.tips">Swifter</a> - 喵神的项目，每周三更新，向您介绍 Swift 的必备 TIP</li>
+<li><a href="http://swiftcn.io">SwiftCN</a> - Swift 开源技术社区</li>
+<li><a href="https://github.com/ipader/SwiftGuide">SwiftGuide</a> - 资料合集</li>
+<li><a href="https://github.com/matteocrippa/awesome-swift">awesome-swift</a> - 资料合集</li>
+</ul>
+
+<h2 id="toc_1">Swift 开源项目</h2>
+
+<ul>
+<li><a href="https://github.com/apple/swift">swift</a></li>
+<li><a href="https://github.com/Alamofire/Alamofire">Alamofire</a> - Elegant HTTP Networking in Swift</li>
+<li><a href="https://github.com/SwiftyJSON/SwiftyJSON">SwiftyJSON</a> - The better way to deal with JSON data in Swift</li>
+<li><a href="https://github.com/MengTo/Spring">Spring</a> - A library to simplify iOS animations in Swift.</li>
+<li><a href="https://github.com/PerfectlySoft/Perfect">Perfect</a> - Server-side Swift.</li>
+<li><a href="https://github.com/allenwong/30DaysofSwift">30DaysofSwift</a> - A self-taught project to learn Swift.</li>
+<li><a href="https://github.com/ochococo/Design-Patterns-In-Swift">Design-Patterns-In-Swift</a> - 设计模式实现</li>
+<li><a href="https://github.com/SnapKit/SnapKit">SnapKit</a> - A Swift Autolayout DSL for iOS &amp; OS X</li>
+<li><a href="https://github.com/hollance/swift-algorithm-club">swift-algorithm-club</a> - 算法和数据结构实现合集</li>
+<li><a href="https://github.com/onevcat/Kingfisher">Kingfisher</a> - A lightweight and pure Swift implemented library for downloading and caching image from the web.</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>
