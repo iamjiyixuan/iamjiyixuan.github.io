@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
     
-  Archives - 计轶轩的技术博客
+  About - 计轶轩的技术博客
   
   </title>
   
@@ -86,94 +86,23 @@
        
 
  <script type="text/javascript">
-  $(function(){
-    $('#menu_item_archives').addClass('is_active');
-  });
+	$(function(){
+		var currentURL = 'about.html';
+		currentURL = currentURL.substr(0,currentURL.length-5);
+		$('#menu_item_'+currentURL).addClass('is_active');
+	});
 </script>
 <div class="row">
-  <div class="large-8 medium-8 columns">
-    <div id="archives-page-wrap">
-        <h1>Archives</h1>
-        <div class="markdown-body archives-wrap">
-          
-             
-                <h1>2016</h1>
-            
-            <div class="article">
-              <a class="clearlink" href="14602511326635.html">
-                <h1>Swift 学习资料整理</h1>
-              </a>
-              <div class="read-more clearfix">
-                <span class="date">2016/4/10</span>
-                
-                 
-              </div>
-            </div><!-- article -->
 
-           
+    <div id="single-page-wrap">
+        <h1>About</h1>
+
+        <div class="markdown-body post-page">
+        <p>iOS 程序员。</p>
+
         </div>
-      </div>
-  </div>
-
- <div class="large-4 medium-4 columns">
-  <div class="hide-for-small">
-    <div id="sidebar" class="sidebar">
-          <div id="site-info" class="site-info">
-            
-                <h1>计轶轩的技术博客</h1>
-                <div class="site-des"></div>
-                <div class="social">
-
-
-
-
-
-
-
-
-
-
-
-  <a class="rss" href="atom.xml" title="RSS">RSS</a>
-                
-              	 </div>
-          	</div>
-              <div id="site-categories" class="side-item ">
-                <div class="side-header">
-                  <h2>Categories</h2>
-                </div>
-                <div class="side-content">
-
-      	<p class="cat-list">
-         
-        </p>
-
-
-                </div>
-              </div>
-
-              <div id="site-categories" class="side-item">
-                <div class="side-header">
-                  <h2>Recent Posts</h2>
-                </div>
-                <div class="side-content">
-                <ul class="posts-list">
-	      
-		      
-			      <li class="post">
-			        <a href="14602511326635.html">Swift 学习资料整理</a>
-			      </li>
-		     
-		   
-		  		</ul>
-                </div>
-              </div>
-        </div><!-- sidebar -->
-      </div><!-- hide for small -->
-</div><!-- large 4 -->
-
-</div><!-- row -->
-
+    </div>
+</div>              
  <div class="page-bottom clearfix">
   <div class="row">
    <p class="copyright">Copyright &copy; 2015
