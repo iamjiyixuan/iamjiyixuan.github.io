@@ -4,7 +4,7 @@
   <title><![CDATA[计轶轩的技术博客]]></title>
   <link href="http://iamjiyixuan.github.io/atom.xml" rel="self"/>
   <link href="http://iamjiyixuan.github.io/"/>
-  <updated>2016-04-10T09:36:48+08:00</updated>
+  <updated>2016-04-10T09:40:28+08:00</updated>
   <id>http://iamjiyixuan.github.io/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -32,7 +32,7 @@
 <h2 id="toc_1">Swift 开源项目</h2>
 
 <ul>
-<li><a href="https://github.com/apple/swift">swift</a></li>
+<li><a href="https://github.com/apple/swift">swift</a> - Swift 本身是开源的</li>
 <li><a href="https://github.com/Alamofire/Alamofire">Alamofire</a> - Elegant HTTP Networking in Swift</li>
 <li><a href="https://github.com/SwiftyJSON/SwiftyJSON">SwiftyJSON</a> - The better way to deal with JSON data in Swift</li>
 <li><a href="https://github.com/MengTo/Spring">Spring</a> - A library to simplify iOS animations in Swift.</li>
