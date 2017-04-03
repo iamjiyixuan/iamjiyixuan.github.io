@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>标题</title>
+    <link>/index.xml</link>
+    <description>Recent content on 标题</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 03 Apr 2017 23:07:01 +0800</lastBuildDate>
+    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>初见 Weex</title>
+      <link>/blog/hello-weex-20170403/</link>
+      <pubDate>Mon, 03 Apr 2017 23:07:01 +0800</pubDate>
+      
+      <guid>/blog/hello-weex-20170403/</guid>
+      <description>&lt;p&gt;Weex 是阿里提出的一套跨平台开发方案，追求 Write Once, Run Everywhere。
+&lt;/p&gt;
+
+&lt;h2 id=&#34;初见&#34;&gt;初见&lt;/h2&gt;
+
+&lt;h3 id=&#34;weex-是什么&#34;&gt;Weex 是什么？&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;一套跨平台开发方案（iOS、Android、浏览器三端）&lt;/li&gt;
+&lt;li&gt;对移动端而言，可以用 web 的开发体验构建高性能、可扩展的 native 应用&lt;/li&gt;
+&lt;li&gt;支持 Vue.js&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;weex-的目标是什么&#34;&gt;Weex 的目标是什么？&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Write Once, Run Everywhere.&lt;/li&gt;
+&lt;li&gt;一套代码同时支持 iOS、Android、浏览器（H5）三端运行&lt;/li&gt;
+&lt;li&gt;打造三端一致的 native 应用&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;学习-weex-之前-你需要了解什么&#34;&gt;学习 Weex 之前，你需要了解什么？&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Node.js&lt;/li&gt;
+&lt;li&gt;HTML + CSS + JavaScript 前端知识&lt;/li&gt;
+&lt;li&gt;Vue.js 框架&lt;/li&gt;
+&lt;li&gt;iOS 或 Android Native 知识&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;搭建开发环境&#34;&gt;搭建开发环境&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://dotwe.org/vue&#34;&gt;dotWe&lt;/a&gt; - Weex 在线调试工具&lt;/li&gt;
+&lt;li&gt;Node.js &amp;amp; npm&lt;/li&gt;
+&lt;li&gt;weex-toolkit - 一个基于 Node.js 的命令行工具（注：1.0.1 之后才支持初始化 Vue 项目）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;hello-weex&#34;&gt;hello-weex&lt;/h2&gt;
+
+&lt;h3 id=&#34;新建-weex-工程&#34;&gt;新建 Weex 工程&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;$ weex init hello-weex
+
+prompt: Init your Project:  (hello-weex)
+file: /Users/jiyixuan/weex_workspace/hello-weex/.babelrc created.
+file: /Users/jiyixuan/weex_workspace/hello-weex/.eslintrc created.
+file: /Users/jiyixuan/weex_workspace/hello-weex/.gitignore created.
+file: /Users/jiyixuan/weex_workspace/hello-weex/README.md created.
+file: /Users/jiyixuan/weex_workspace/hello-weex/app.js created.
+file: /Users/jiyixuan/weex_workspace/hello-weex/assets/phantom-limb.js created.
+file: /Users/jiyixuan/weex_workspace/hello-weex/assets/qrcode.js created.
+file: /Users/jiyixuan/weex_workspace/hello-weex/assets/qrcode.min.js created.
+file: /Users/jiyixuan/weex_workspace/hello-weex/assets/style.css created.
+file: /Users/jiyixuan/weex_workspace/hello-weex/assets/url.js created.
+file: /Users/jiyixuan/weex_workspace/hello-weex/build/init.js created.
+file: /Users/jiyixuan/weex_workspace/hello-weex/index.html created.
+file: /Users/jiyixuan/weex_workspace/hello-weex/package.json created.
+file: /Users/jiyixuan/weex_workspace/hello-weex/src/foo.vue created.
+file: /Users/jiyixuan/weex_workspace/hello-weex/webpack.config.js created.
+file: /Users/jiyixuan/weex_workspace/hello-weex/weex.html created.
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;weex-工程标准结构&#34;&gt;Weex 工程标准结构&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;├── README.md
+├── app.js
+├── assets
+│   ├── phantom-limb.js
+│   ├── qrcode.js
+│   ├── qrcode.min.js
+│   ├── style.css
+│   └── url.js
+├── build
+│   └── init.js
+├── index.html
+├── package.json
+├── src
+│   └── foo.vue
+├── webpack.config.js
+└── weex.html
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;安装&#34;&gt;安装&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;$ npm install
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;安装成功后，根目录下多出 node_modules 目录。&lt;/p&gt;
+
+&lt;h3 id=&#34;启动服务&#34;&gt;启动服务&lt;/h3&gt;
+
+&lt;p&gt;执行 &lt;code&gt;npm run serve&lt;/code&gt; 启动一个本地服务，并在浏览器打开 &lt;code&gt;http://localhost:8080/index.html&lt;/code&gt; 查看 Weex h5 页面&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ npm run serve
+
+&amp;gt; hello-weex@0.1.0 serve /Users/jiyixuan/weex_workspace/hello-weex
+&amp;gt; node build/init.js &amp;amp;&amp;amp; serve -p 8080
+
+serving /Users/jiyixuan/weex_workspace/hello-weex on port 8080
+GET /index.html 200 9ms - 1.6kb
+GET /config.js 200 3ms - 32
+GET /assets/style.css 200 8ms - 1.14kb
+GET /assets/url.js 200 5ms - 295
+GET /assets/qrcode.js 200 4ms - 48.89kb
+GET /node_modules/vue/dist/vue.js 200 5ms - 238.7kb
+GET /weex.html 200 1ms - 891
+GET /assets/phantom-limb.js 200 6ms - 10.12kb
+GET /dist/app.web.js 200 5ms - 15.02kb
+GET /node_modules/vue/dist/vue.runtime.js 200 6ms - 172.52kb
+GET /node_modules/weex-vue-render/index.js 200 7ms - 713.49kb
+GET /weex.html 304 1ms
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;hello-weex-for-ios&#34;&gt;hello-weex for iOS&lt;/h3&gt;
+
+&lt;h4 id=&#34;通过-cocoapods-安装-weexsdk&#34;&gt;通过 CocoaPods 安装 WeexSDK&lt;/h4&gt;
+
+&lt;p&gt;常规做法，没什么要特别说明的。&lt;/p&gt;
+
+&lt;h4 id=&#34;初始化-weex-环境&#34;&gt;初始化 Weex 环境&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-Objective-C&#34;&gt;- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    // 配置
+    [WXAppConfiguration setAppGroup:@&amp;quot;study-weex&amp;quot;];
+    [WXAppConfiguration setAppName:@&amp;quot;hello-weex-ios&amp;quot;];
+    [WXAppConfiguration setAppVersion:@&amp;quot;1.0.0&amp;quot;];
+    
+    // 初始化 SDK
+    [WXSDKEngine initSDKEnvironment];
+    
+    // 设置日志
+    [WXLog setLogLevel: WXLogLevelAll];
+    
+    return YES;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;渲染页面&#34;&gt;渲染页面&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-Objective-C&#34;&gt;#import &amp;quot;ViewController.h&amp;quot;
+// 3rd
+#import &amp;lt;WeexSDK/WXSDKInstance.h&amp;gt;
+
+@interface ViewController ()
+
+@property (nonatomic, strong) NSURL *url;
+@property (nonatomic, strong) WXSDKInstance *instance;
+@property (nonatomic, strong) UIView *weexView;
+    
+@end
+
+@implementation ViewController
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    _url = [NSURL URLWithString:@&amp;quot;http://192.168.1.186:8080/dist/app.weex.js&amp;quot;];
+    
+    _instance = [[WXSDKInstance alloc] init];
+    _instance.viewController = self;
+    _instance.frame = self.view.frame;
+    
+    __weak typeof(self) weakSelf = self;
+    _instance.onCreate = ^(UIView *view) {
+        [weakSelf.weexView removeFromSuperview];
+        weakSelf.weexView = view; // 官方文档里少了这句，会导致看不到界面
+        [weakSelf.view addSubview:weakSelf.weexView];
+    };
+    
+    _instance.onFailed = ^(NSError *error) {
+        // process failure
+    };
+    
+    _instance.renderFinish = ^ (UIView *view) {
+        // process renderFinish
+    };
+    [_instance renderWithURL:self.url options:@{@&amp;quot;bundleUrl&amp;quot;:[self.url absoluteString]} data:nil];
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
+
+- (void)dealloc
+{
+    // 销毁掉 Weex instance，释放内存，避免造成内存泄露
+    [_instance destroyInstance];
+}
+
+@end
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;hello-weex-for-android&#34;&gt;hello-weex for Android&lt;/h3&gt;
+
+&lt;h4 id=&#34;新建工程-设置依赖&#34;&gt;新建工程，设置依赖&lt;/h4&gt;
+
+&lt;p&gt;app/build.gradle&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;apply plugin: &#39;com.android.application&#39;
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion &amp;quot;25.0.2&amp;quot;
+    defaultConfig {
+        applicationId &amp;quot;android.neegle.net.helloweexandroid&amp;quot;
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName &amp;quot;1.0&amp;quot;
+        testInstrumentationRunner &amp;quot;android.support.test.runner.AndroidJUnitRunner&amp;quot;
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile(&#39;proguard-android.txt&#39;), &#39;proguard-rules.pro&#39;
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: &#39;libs&#39;, include: [&#39;*.jar&#39;])
+    androidTestCompile(&#39;com.android.support.test.espresso:espresso-core:2.2.2&#39;, {
+        exclude group: &#39;com.android.support&#39;, module: &#39;support-annotations&#39;
+    })
+    compile &#39;com.android.support:appcompat-v7:23.1.1&#39;
+    compile &#39;com.android.support:recyclerview-v7:23.1.1&#39;
+    compile &#39;com.android.support:support-v4:23.1.1&#39;
+    compile &#39;com.android.support:appcompat-v7:23.1.1&#39;
+    compile &#39;com.alibaba:fastjson:1.1.46.android&#39;
+    compile &#39;com.taobao.android:weex_sdk:0.10.0&#39;  // 0.10.0 以上版本才支持 Vue.js
+    testCompile &#39;junit:junit:4.12&#39;
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;新建-imageadapter&#34;&gt;新建 ImageAdapter&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-Java&#34;&gt;import android.widget.ImageView;
+
+import com.taobao.weex.adapter.IWXImgLoaderAdapter;
+import com.taobao.weex.common.WXImageStrategy;
+import com.taobao.weex.dom.WXImageQuality;
+
+/**
+ * Created by jiyixuan on 2017/3/29.
+ */
+
+public class ImageAdapter implements IWXImgLoaderAdapter {
+
+    @Override
+    public void setImage(String url, ImageView view, WXImageQuality quality, WXImageStrategy strategy) {
+        //实现你自己的图片下载。
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;新建-weexapplication&#34;&gt;新建 WeexApplication&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-Java&#34;&gt;import android.app.Application;
+
+import com.taobao.weex.InitConfig;
+import com.taobao.weex.WXSDKEngine;
+import com.taobao.weex.common.WXException;
+
+/**
+ * Created by jiyixuan on 2017/3/29.
+ */
+
+public class WeexApplication extends Application {
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+        InitConfig config = new InitConfig.Builder().setImgAdapter(new ImageAdapter()).build();
+        WXSDKEngine.initialize(this, config);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;修改-androidmanifest-xml-启用-weexapplication&#34;&gt;修改 AndroidManifest.xml 启用 WeexApplication&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;utf-8&amp;quot;?&amp;gt;
+&amp;lt;manifest xmlns:android=&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;
+    package=&amp;quot;android.neegle.net.helloweexandroid&amp;quot;&amp;gt;
+
+    &amp;lt;uses-permission android:name=&amp;quot;android.permission.INTERNET&amp;quot;/&amp;gt;
+    &amp;lt;uses-permission android:name=&amp;quot;android.permission.ACCESS_NETWORK_STATE&amp;quot;/&amp;gt;
+
+    &amp;lt;application
+        android:name=&amp;quot;.WeexApplication&amp;quot;
+        android:allowBackup=&amp;quot;true&amp;quot;
+        android:icon=&amp;quot;@mipmap/ic_launcher&amp;quot;
+        android:label=&amp;quot;@string/app_name&amp;quot;
+        android:supportsRtl=&amp;quot;true&amp;quot;
+        android:theme=&amp;quot;@style/AppTheme&amp;quot;&amp;gt;
+        &amp;lt;activity android:name=&amp;quot;.MainActivity&amp;quot;&amp;gt;
+            &amp;lt;intent-filter&amp;gt;
+                &amp;lt;action android:name=&amp;quot;android.intent.action.MAIN&amp;quot; /&amp;gt;
+                &amp;lt;category android:name=&amp;quot;android.intent.category.LAUNCHER&amp;quot; /&amp;gt;
+            &amp;lt;/intent-filter&amp;gt;
+        &amp;lt;/activity&amp;gt;
+    &amp;lt;/application&amp;gt;
+
+&amp;lt;/manifest&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&#34;mainactivity&#34;&gt;MainActivity&lt;/h4&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-Java&#34;&gt;package android.neegle.net.helloweexandroid;
+
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+
+import com.taobao.weex.IWXRenderListener;
+import com.taobao.weex.WXSDKInstance;
+import com.taobao.weex.common.WXRenderStrategy;
+import com.taobao.weex.utils.WXFileUtils;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class MainActivity extends AppCompatActivity implements IWXRenderListener {
+
+    private static final String WEB_URL=&amp;quot;http://192.168.1.186:8080/dist/app.weex.js&amp;quot;;
+    WXSDKInstance mWXSDKInstance;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        mWXSDKInstance = new WXSDKInstance(this);
+        mWXSDKInstance.registerRenderListener(this);
+
+        Map&amp;lt;String, Object&amp;gt; options = new HashMap&amp;lt;&amp;gt;();
+        // 加载服务器 js
+//        options.put(WXSDKInstance.BUNDLE_URL, WEB_URL);
+//        mWXSDKInstance.render(&amp;quot;WXSample&amp;quot;,WEB_URL,options, null, WXRenderStrategy.APPEND_ONCE);
+        // 加载本地 js
+        options.put(WXSDKInstance.BUNDLE_URL, &amp;quot;file://build/hello.js&amp;quot;);
+        mWXSDKInstance.render(&amp;quot;WXSample&amp;quot;,WXFileUtils.loadAsset(&amp;quot;build/app.weex.js&amp;quot;, this),options, null, WXRenderStrategy.APPEND_ONCE);
+    }
+
+    @Override
+    public void onViewCreated(WXSDKInstance instance, View view) {
+        setContentView(view);
+    }
+
+    @Override
+    public void onRenderSuccess(WXSDKInstance instance, int width, int height) {
+    }
+    @Override
+    public void onRefreshSuccess(WXSDKInstance instance, int width, int height) {
+    }
+    @Override
+    public void onException(WXSDKInstance instance, String errCode, String msg) {
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if(mWXSDKInstance!=null){
+            mWXSDKInstance.onActivityResume();
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        if(mWXSDKInstance!=null){
+            mWXSDKInstance.onActivityPause();
+        }
+    }
+    @Override
+    protected void onStop() {
+        super.onStop();
+        if(mWXSDKInstance!=null){
+            mWXSDKInstance.onActivityStop();
+        }
+    }
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        if(mWXSDKInstance!=null){
+            mWXSDKInstance.onActivityDestroy();
+        }
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://weex.apache.org/cn/&#34;&gt;weex 官网&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://vuejs.org&#34;&gt;Vue.js&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://www.jianshu.com/p/41cde2c62b81&#34;&gt;Weex 是如何在 iOS 客户端上跑起来的&lt;/a&gt; by 一缕殇流化隐半边冰霜 2017&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>about</title>
+      <link>/about/</link>
+      <pubDate>Mon, 03 Apr 2017 21:14:44 +0800</pubDate>
+      
+      <guid>/about/</guid>
+      <description>
+
+&lt;p&gt;计轶轩，生于浙江杭州，曾求学于香港，现工作于上海。目前是一名专注于 iOS 的职业开发者，对技术充满热情。&lt;/p&gt;
+
+&lt;h4 id=&#34;教育经历&#34;&gt;教育经历&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;信息技术管理，理学硕士学位，2011，香港浸会大学&lt;/li&gt;
+&lt;li&gt;计算机科学与技术，工学学士学位，2010，浙江工业大学&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;职业经历&#34;&gt;职业经历&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;2012 年 9 月 ~ 至今，上海神计信息系统工程有限公司，软件工程师
+
+&lt;ul&gt;
+&lt;li&gt;iOS 应用开发，项目技术负责人&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;公司项目&#34;&gt;公司项目&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://itunes.apple.com/us/app/霓歌/id1158755538?mt=8&#34;&gt;霓歌&lt;/a&gt; - 一款移动即时通讯应用，支持文本、图片等多媒体传输，支持一对一聊天和群聊，支持个人动态分享，支持企业号、订阅号、客服中心号等公众号功能。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;个人项目&#34;&gt;个人项目&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/iamjiyixuan/iOS-dev-skill-map&#34;&gt;iOS-dev-skill-map&lt;/a&gt; - 本人总结整理的 iOS 开发技能图谱&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;技能清单&#34;&gt;技能清单&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;熟悉 iOS 项目从需求到上线的完整流程&lt;/li&gt;
+&lt;li&gt;熟练掌握 Objective-C，了解 Swift&lt;/li&gt;
+&lt;li&gt;熟悉 C/C++，有编写 C++ 网络模块的实践经验&lt;/li&gt;
+&lt;li&gt;熟练使用 CocoaPods&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
